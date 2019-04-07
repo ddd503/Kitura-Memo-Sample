@@ -34,6 +34,17 @@ public class App {
 
             respondWith(new, nil)
         }
+        router.get("/memos") { (respondWith: ([Memo]?, RequestError?) -> Void) in
+            respondWith(self.memos.values.map({ $0 }), nil)
+        }
+        router.get("/memos") { (id: Int, respondWith: (Memo?, RequestError?) -> Void) in
+            if let memo = self.memos[id] {
+                respondWith(memo, nil)
+            } else {
+                respondWith(nil, .notFound)
+            }
+        }
+        
     }
 
     public func run() throws {
