@@ -53,6 +53,14 @@ public class App {
                 respondWith(nil, .notFound)
             }
         }
+        router.delete("/memos") { (id: Int, respondWith: (RequestError?) -> Void) in
+            if self.memos[id] != nil {
+                self.memos.removeValue(forKey: id)
+                respondWith(nil)
+            } else {
+                respondWith(.notFound)
+            }
+        }
         
     }
 
