@@ -1,0 +1,4 @@
+module memplugin {
+    umbrella "/Users/kawaharadai/xcode sorcefile/git管理/Kitura-Memo-Sample/.build/checkouts/omr-agentcore/src/memplugin/include"
+    export *
+}

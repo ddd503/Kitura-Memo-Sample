@@ -1,0 +1,4 @@
+module hcapiplugin {
+    umbrella "/Users/kawaharadai/xcode sorcefile/git管理/Kitura-Memo-Sample/.build/checkouts/omr-agentcore/src/hcapiplugin/include"
+    export *
+}

@@ -1,0 +1,3 @@
+.build/							usr/src/Kitura-Memo-Sample
+terraform/scripts/install.sh	usr/src/Kitura-Memo-Sample
+terraform/scripts/start.sh		usr/src/Kitura-Memo-Sample
