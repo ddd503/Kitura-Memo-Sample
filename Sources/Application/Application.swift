@@ -44,6 +44,15 @@ public class App {
                 respondWith(nil, .notFound)
             }
         }
+        router.put("/memos") { (id: Int, memo: Memo, respondWith: (Memo?, RequestError?) -> Void) in
+            if self.memos[id] != nil {
+                let modified = Memo(id: id, text: memo.text)
+                self.memos[id] = modified
+                respondWith(modified, nil)
+            } else {
+                respondWith(nil, .notFound)
+            }
+        }
         
     }
 
